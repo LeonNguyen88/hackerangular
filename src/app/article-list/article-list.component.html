@@ -1,0 +1,23 @@
+<div class="container-sm">
+
+
+
+
+  <img src="assets/hacker.webp" class="article-banner">
+  <div class="articles row mt-5 mb-5">
+    <ng-container *ngIf="articles$ | async as articles">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-3" *ngFor="let article of articles">
+        <a [routerLink]="['/article']" [queryParams]="{link: article.url}">
+          <img [src]="article.coverImageUrl || image" class="article-image" />
+
+          <div class="article-title text-center">
+            <h3 class="mb-3">{{ article.title | slice:0:51 }} {{ article.title.length > 51 ? '...' : ''}}</h3>
+            <h5 class="article-description">{{ article.description}}</h5>
+            <h5 class="text-success">{{ article.subtitle}}</h5>
+          </div>
+        </a>
+      </div>
+      <button class="btn-secondary m-auto" (click)="getMore()">Get More</button>
+    </ng-container>
+  </div>
+</div>

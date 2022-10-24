@@ -1,0 +1,14 @@
+<ng-container *ngIf="article$ | async as article">
+  <div class="container-sm">
+
+
+  <img [src]="article.coverImageUrl" class="article-banner mt-5 mb-5">
+  <h2 class="article-title text-center">{{ article.title }}</h2>
+  <h2 class="article-description text-primary">{{ article.description }}</h2>
+  <h5 class="text-success" *ngIf="article.subtitle">Reference: {{ article.subtitle }}</h5>
+
+  <div class="article-content" [innerHTML]="article.content"></div>
+
+
+</div>
+</ng-container>
