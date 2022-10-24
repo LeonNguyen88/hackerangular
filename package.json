@@ -35,7 +35,10 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular/compiler": "^14.2.0",
+    "@angular/compiler-cli": "^14.2.0",
     "@angular-devkit/build-angular": "^14.2.6",
+    "typescript": "~4.7.2",
     "@datorama/akita-ngdevtools": "^7.0.0",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.3.0",
